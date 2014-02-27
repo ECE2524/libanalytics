@@ -2,7 +2,7 @@ AC_INIT([wordfreq], [0.2.0], [dmaczka@vt.edu])
 
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([foreign -Wportability -Wall -Werror subdir-objects])
-AM_PROG_AR
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 LT_INIT
 AC_PROG_CC
 AC_PROG_CC_C99

@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: Text Analytics
+Description: Tools to analyze text
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -lanalytics
+Cflags: -I${includedir}/analytics -I${libdir}/analytics/include

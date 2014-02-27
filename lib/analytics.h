@@ -5,7 +5,6 @@
 #ifndef _ANALYTICS_H_
 #define _ANALYTICS_H_
 
-#include <config.h>
 #include <stdio.h>
 
 #include "word_list.h"

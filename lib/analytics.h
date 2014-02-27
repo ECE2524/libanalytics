@@ -10,22 +10,34 @@
 #include "word_list.h"
 #include "word_map.h"
 
-/* @brief extract a list of words from a stream
- * @param[in] is, input FILE stream
- * @return a word_list_t structure
- */
+/**
+    @brief extract a list of words from a stream
+
+    @param is input FILE stream
+
+    @return a word_list_t structure containing the words extracted from the stream
+*/
 word_list_t split_words(FILE* is);
 
-/* @brief count occurrences of words in a list
- * @param[in] words a list of words
- * @return a word_map_t (a list of word_map_node_t)
- */
+/** 
+    @brief count occurrences of words in a list
+
+    @param words a list of words
+
+    @return a list of word,integer pairs contained in a \ref word_map_t
+*/
 word_map_t count_words(const word_list_t words);
 
-/* @brief sort a counted word list numerically
- * @param[in,out] base pointer to first object in word list
- * @param[in] num number of elements in array pointed to by \ref{base}
- */
-void sort_counted_words(word_map_t wm);
+/** 
+    @brief sort a counted word list
+    
+    Sorts first by numerical value, then alphabetically. The sort is
+    done "in place", i.e. the word_map_t object is modified.
+
+    @param wm the word map object to sort 
+
+    @param opt sort options. For now, just set to 0
+*/
+void sort_counted_words(word_map_t wm, int opt);
 
 #endif

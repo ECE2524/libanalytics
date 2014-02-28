@@ -51,6 +51,14 @@ word_list_sort(word_list_t wl, int(*compar)(const void *, const void *));
 unsigned long
 word_list_count(const word_list_t wl);
 
+/**
+   @breif accumulate all values in wl to \ref data
+   
+   accumulate each item with \ref data by passing each to \ref fnptr
+
+   @param data inital value
+   @param fnptr a pointer to the function defining the operation to perform
+*/
 void 
 word_list_inject(const word_list_t wl, void *data,  int(*fnptr)(void*, const char*));
 

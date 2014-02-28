@@ -1,13 +1,6 @@
-#include <config.h>
-#include <err.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 #include "analytics.h"
-
-#define WANY_SHOW_COUNT 1;
-
-int flags = 0;
 
 void
 print_word_count(const char *word, int count) {

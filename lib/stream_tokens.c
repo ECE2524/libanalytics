@@ -9,7 +9,7 @@
 
 enum tokenizer_errors {
     TOK_EOF = -1,
-    TOK_ALLOCATION = -2,
+    TOK_ALLOCATION = -2
 };
 
 /* Extract the next token from the stream
@@ -20,11 +20,13 @@ enum tokenizer_errors {
 int next_token(FILE * fp, char **token, const char* delim)
 {
     size_t buf_size = INITIAL_BUFFER_SIZE, diff;
-    *token = malloc(buf_size*sizeof(char));
-    char *ptr = *token;
-    char *temp;
+    char * ptr;
+    char * temp;
     int len = 0;
     int c;
+
+    *token = malloc(buf_size*sizeof(char));
+    ptr = *token;
 
     while (((c = fgetc(fp)) != EOF) && strchr(delim, c) == NULL) {
         diff = ptr - *token;

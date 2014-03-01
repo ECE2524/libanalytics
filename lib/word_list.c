@@ -46,7 +46,7 @@ word_list_grow(word_list_t wl, size_t new) {
         wl->size = new;
         return 0;
     } else {
-        //since we didn't malloc this here it's up to the caller to free if there's a realloc error
+        /* since we didn't malloc this here it's up to the caller to free if there's a realloc error */
         return -1;
     }
 }

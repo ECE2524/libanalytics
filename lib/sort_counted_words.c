@@ -12,5 +12,6 @@ cmpwordcount(const void *p1, const void *p2)
 }
 
 void sort_counted_words(word_map_t counted, int opt) {
+    opt=0;
     word_map_sort(counted, cmpwordcount);
 }

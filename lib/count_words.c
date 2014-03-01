@@ -1,4 +1,3 @@
-#include <err.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -6,16 +5,6 @@
 #include "word_list.h"
 
 #include "analytics.h"
-
-static int
-cmpstringp(const void *p1, const void *p2)
-{
-    /* The actual arguments to this function are "pointers to
-              pointers to char", but strcmp(3) arguments are "pointers
-              to char", hence the following cast plus dereference */
-
-    return strcmp(* (char * const *) p1, * (char * const *) p2);
-}
 
 static
 int word_count_injector(void *wm, const char* word) {

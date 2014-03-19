@@ -17,7 +17,7 @@ enum { AMAP_SORT_DESCENDING=0x00,
 word_map_t word_map_create(size_t n);
 
 /**
- * @param words NULL terminated array of word_map objects
+ * @param an initialized word_map object
  */
 void word_map_free(word_map_t words);
 

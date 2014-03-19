@@ -5,15 +5,21 @@
 #ifndef _WORD_LIST_H_
 #define _WORD_LIST_H_
 
-/*
- * @param n initial size of word_list
- */
+/**
+   @breif object encapsulating a list of words
+
+*/
 typedef struct word_list* word_list_t;
 
-/** @brief create a new word list
- * @param n initial size of word list
- * @return a freshly allocated \ref word_list_t
- */
+/** 
+    @brief create a new word list
+    @param n initial size of word list
+    @return a freshly allocated \ref word_list_t
+
+    initialization performs dynamic memory allocation. It is the caller's
+    responsibility to call \ref word_list_free on the returned word_list_t
+    object when it is no longer needed.
+*/
 word_list_t
 word_list_create(size_t n);
 

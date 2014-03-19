@@ -117,10 +117,15 @@ word_count_inc(word_node_t node, int value) {
 }
 
 int
-word_node_compare(const word_node_t p1, const word_node_t p2) {
+word_node_compare(const word_node_t p1, const word_node_t p2, int opt) {
     if (p2->count == p1->count)
         return strcmp(p1->word, p2->word);
-    return p2->count - p1->count;
+
+    if ( opt & AMAP_SORT_ASCENDING ) {
+        return p1->count - p2->count;
+    } else {
+        return p2->count - p1->count;
+    }
 }
 
 void

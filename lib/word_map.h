@@ -8,6 +8,8 @@
 typedef struct word_map* word_map_t;
 typedef struct word_map_node* word_node_t;
 
+enum { AMAP_SORT_DESCENDING=0x00, 
+       AMAP_SORT_ASCENDING=0x01 };
 
 /**
  * @param n initial size of word_map
@@ -27,7 +29,6 @@ void word_map_free(word_map_t words);
 word_node_t 
 word_map_find(const word_map_t wm, const char* word);
 
-
 int
 word_map_insert(word_map_t wm, const char* key, int val);
 
@@ -41,7 +42,7 @@ void
 word_count_inc(word_node_t node, int value);
 
 int
-word_node_compare(const word_node_t n1, const word_node_t n2);
+word_node_compare(const word_node_t n1, const word_node_t n2, int opt);
 
 /**
    @brief apply a function to each item in word map

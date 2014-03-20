@@ -46,7 +46,7 @@ word_map_t count_words(const word_list_t words);
 
     @param wm the word map object to sort 
 
-    @param opt sort options. For now, just set to 0
+    @param opt sort options. May be either \ref AMAP_SORT_ASCENDING or \ref AMAP_SORT_DESCENDING.
 */
 void sort_counted_words(word_map_t wm, int opt);
 

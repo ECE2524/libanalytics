@@ -7,7 +7,7 @@ lib_LTLIBRARIES = lib/libstreamtoken.la lib/libanalytics.la
 lib_libstreamtoken_includes = lib/stream_tokens.h
 lib_libstreamtoken_la_SOURCES = lib/stream_tokens.c
 
-lib_libanalytics_includes = lib/analytics.h lib/word_list.h lib/word_map.h lib/stream_tokens.h
+lib_libanalytics_includes = lib/analytics.h lib/word_list.h lib/word_map.h
 lib_libanalytics_la_LIBADD = lib/libstreamtoken.la
 lib_libanalytics_la_SOURCES = lib/split_words.c lib/word_list.c lib/word_map.c lib/count_words.c lib/sort_counted_words.c
 lib_libanalytics_la_LDFLAGS = -no-undefined

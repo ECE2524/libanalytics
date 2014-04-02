@@ -92,3 +92,8 @@ unsigned long
 word_list_count(const word_list_t wl) {
     return wl->count;
 }
+
+int
+word_list_injector( void *wl, const char *w ) {
+    return word_list_insert( (word_list_t)wl, w);
+}

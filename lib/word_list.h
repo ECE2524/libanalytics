@@ -68,4 +68,7 @@ word_list_count(const word_list_t wl);
 void 
 word_list_inject(const word_list_t wl, void *data,  int(*fnptr)(void*, const char*));
 
+int
+word_list_injector( void *wl, const char *w );
+
 #endif

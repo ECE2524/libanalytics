@@ -9,6 +9,7 @@
 
 #include "word_list.h"
 #include "word_map.h"
+#include "stream_tokens.h"
 
 /**
     @brief extract a list of words from a stream

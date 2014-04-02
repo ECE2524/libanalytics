@@ -1,3 +1,6 @@
+#ifndef _STREAM_TOKENS_H_
+#define _STREAM_TOKENS_H_
+
 #include <stdio.h>
 
 /*
@@ -21,3 +24,5 @@ int next_token(FILE* fp, char **token, const char*);
  */
 int
 token_inject(FILE *fp, const char* delim, void* data, int(*fnptr)(void*, const char*), int options);
+
+#endif

@@ -2,7 +2,7 @@
 #include "word_list.h"
 #include "analytics.h"
 
-static int
+int
 word_list_injector( void *wl, const char *w ) {
     return word_list_insert( (word_list_t)wl, w);
 }
